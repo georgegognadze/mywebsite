@@ -1,0 +1,161 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>Experience!</h1>
+      <div class="experience-list">
+        <section class="experience-item">
+          <h3>Freelance Frontend Developer</h3>
+          <a href="https://www.upwork.com/" target="_blank" class="company-link">Upwork</a>
+          <p>
+            Freelancing since January 2023, became active on Upwork in April 2024, collaborating with various clients on projects using ReactJS, PixiJS, D3JS, HTML, CSS, and JavaScript.
+          </p>
+          <span class="experience-dates">January 2023 - Present</span>
+        </section>
+
+        <section class="experience-item">
+          <h3>Senior Frontend Developer</h3>
+          <a href="https://orbitalgaming.com/" target="_blank" class="company-link">Orbital Gaming</a>
+          <p>
+            Contributed new features, bug fixes, and optimizations to a slot game. Worked with ReactJS, PixiJS, HTML, CSS, and JavaScript.
+          </p>
+          <span class="experience-dates">October 2023 - February 2024</span>
+        </section>
+
+        <section class="experience-item">
+          <h3>Software Engineer</h3>
+          <a href="https://exadel.com/" target="_blank" class="company-link">Exadel</a>
+          <p>
+            Senior UI Developer at Hewlett Packard Enterprise, working with Salesforce LWC, XML, JavaScript, HTML, CSS, and ReactJS.
+          </p>
+          <span class="experience-dates">September 2021 - September 2023</span>
+        </section>
+
+        <section class="experience-item">
+          <h3>Invited Lecturer</h3>
+          <a href="https://ug.edu.ge/" target="_blank" class="company-link">The University of Georgia</a>
+          <p>Teaching C++ fundamentals in Georgian and English.</p>
+          <span class="experience-dates">March 2021 - February 2023</span>
+        </section>
+
+        <section class="experience-item">
+          <h3>Invited Lecturer</h3>
+          <a href="https://btu.edu.ge/" target="_blank" class="company-link">Business and Technology University</a>
+          <p>Teaching front-end development (HTML, CSS, JavaScript) in Georgian.</p>
+          <span class="experience-dates">March 2021 - August 2022</span>
+        </section>
+
+        <section class="experience-item">
+          <h3>Front-End Developer</h3>
+          <a href="https://digitail.io/" target="_blank" class="company-link">Digitail</a>
+          <p>Worked on the website, fixing bugs and optimizing code using HTML, CSS, JavaScript, and ReactJS.</p>
+          <span class="experience-dates">May 2021 - August 2021</span>
+        </section>
+
+        <section class="experience-item">
+          <h3>Front-End Developer</h3>
+          <div class="company-link">MIMA Staff LLC</div>
+          <p>Improved website frontend, fixed bugs, and optimized code using HTML, CSS, JavaScript, and ReactJS.</p>
+          <span class="experience-dates">February 2021 - April 2021</span>
+        </section>
+
+        <section class="experience-item">
+          <h3>Front-End Developer</h3>
+          <a href="https://tbcpay.ge/en/" target="_blank" class="company-link">TBC Pay</a>
+          <p>Implemented designs into code with pixel-perfect precision and developed new features using HTML, CSS, JavaScript, Jquery, Bootstrap, and XML.</p>
+          <span class="experience-dates">September 2017 - January 2021</span>
+        </section>
+
+        <section class="experience-item">
+          <h3>Front-End Developer</h3>
+          <a href="https://tbcinsurance.ge/en" target="_blank" class="company-link">TBC Insurance</a>
+          <p>Implemented designs into code using HTML, CSS, JavaScript, Jquery, Bootstrap, and Material Design.</p>
+          <span class="experience-dates">December 2019 - February 2020</span>
+        </section>
+
+        <section class="experience-item">
+          <h3>Front-End Developer</h3>
+          <div class="company-link">Smart Solution LLC</div>
+          <p>Created responsive websites using HTML, CSS, JavaScript, Jquery, and Bootstrap.</p>
+          <span class="experience-dates">July 2017 - September 2017</span>
+        </section>
+      </div>
+    </main>
+    <Footer />
+    <style>
+      h3 {
+        margin-top: 30px;
+      }
+      a {
+        font-size:30px;
+      }
+
+  h1 {
+    margin-bottom: 1.35rem;
+  }
+
+  .experience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .experience-item {
+    padding: 1rem;
+    border: 1px solid #e1e1e1;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .company-link {
+    font-size: 1.2rem;
+    color: #0077b6;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  .company-link:hover {
+    text-decoration: underline;
+  }
+
+  p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .experience-dates {
+    display: block;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #666;
+  }
+
+  @media (max-width: 768px) {
+    .experience-section {
+      padding: 0 1rem;
+    }
+
+    h1 {
+      font-size: 2rem;
+    }
+  }
+    </style>
+  </body>
+</html>

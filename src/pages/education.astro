@@ -1,0 +1,105 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../consts";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <h1>Education</h1>
+      <div class="education-section">
+        <div class="education-item">
+          <h4><a href="https://ug.edu.ge/en" target="_blank">The University of Georgia</a></h4>
+          <div class="degree">Master of Computer Science</div>
+          <div class="field">Computer Science</div>
+          <div class="duration"><span>September 2017 - March 2022</span></div>
+        </div>
+
+        <div class="education-item">
+          <h4><a href="https://www.startupschool.org/" target="_blank">Y Combinator’s Startup School</a></h4>
+          <div class="degree">Graduate</div>
+          <div class="field">Entrepreneurship</div>
+          <div class="duration"><span>July 2019 - September 2019</span></div>
+        </div>
+
+        <div class="education-item">
+          <h4><a href="https://www.udacity.com/" target="_blank">Udacity</a></h4>
+          <div class="degree">Graduate</div>
+          <div class="field">Google Developer Challenge Scholarship to the Front-End Web Developer track</div>
+          <div class="duration"><span>November 2017 - February 2018</span></div>
+        </div>
+
+        <div class="education-item">
+          <h4><a href="https://ug.edu.ge/en" target="_blank">The University of Georgia</a></h4>
+          <div class="degree">Bachelor of Computer Science</div>
+          <div class="field">Computer Science</div>
+          <div class="duration"><span>September 2012 - July 2017</span></div>
+        </div>
+      </div>
+    </main>
+    <Footer />
+    <style>
+      /* h4 {
+        margin-top: 30px;
+      }
+      a {
+        font-size: 30px;
+      } */
+      h1 {
+        margin-bottom: 40px;
+      }
+      .education-section {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-top: 20px;
+      }
+
+      .education-item {
+        background: #f9f9f9;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .education-item h4 {
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+      }
+
+      .education-item a {
+        color: #007bff;
+        text-decoration: none;
+      }
+
+      .education-item a:hover {
+        text-decoration: underline;
+      }
+
+      .degree {
+        font-weight: bold;
+        font-size: 1.2rem;
+      }
+
+      .field {
+        color: #555;
+      }
+
+      .duration {
+        font-size: 0.9rem;
+        color: #777;
+      }
+
+      .education-item:last-child {
+        margin-bottom: 0;
+      }
+    </style>
+  </body>
+</html>
