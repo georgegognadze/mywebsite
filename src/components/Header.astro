@@ -129,7 +129,6 @@ import { SITE_TITLE } from "../consts";
   .hamburger span:nth-child(3) {
     top: 1.8rem;
   }
-  /* Transform to X when active */
   .hamburger.active span:nth-child(1) {
     transform: rotate(45deg);
     top: 1.2rem;
@@ -160,7 +159,7 @@ import { SITE_TITLE } from "../consts";
     display: flex;
     width: -webkit-fill-available;
     right: 0;
-    margin-top: 60px;
+    margin-top: 70px;
     background-color: #60739f;
   }
 
@@ -173,13 +172,21 @@ import { SITE_TITLE } from "../consts";
     nav h2 {
       display: none;
     }
+    header {
+      height: 70px;
+      display: flex;
+      justify-content: center;
+      padding: 0;
+    }
+  }
+  @media (max-width: 560px) {
+    .internal-links {
+      display: none;
+    }
     .hamburger {
       display: flex;
       margin: 0 auto;
       border-radius: 5px;
-    }
-    .internal-links {
-      display: none;
     }
     .mobile-menu {
       display: none;
@@ -192,25 +199,21 @@ import { SITE_TITLE } from "../consts";
       letter-spacing: 0.05rem;
       text-transform: uppercase;
     }
-
-    header {
-      height: 60px;
-      display: flex;
-      justify-content: center;
-      padding: 0;
-    }
   }
 </style>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const hamburger = document.querySelector(".hamburger");
-  const mobileMenu = document.querySelector(".mobile-menu");
+  document.addEventListener("DOMContentLoaded", function () {
+    const hamburger = document.querySelector(".hamburger");
+    const mobileMenu = document.querySelector(".mobile-menu");
 
-  hamburger.addEventListener("click", function () {
-    this.classList.toggle("active");
-    mobileMenu.classList.toggle("active");
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener("click", function (this: HTMLButtonElement) {
+        this.classList.toggle("active");
+        mobileMenu.classList.toggle("active");
+      });
+    } else {
+      console.error("Hamburger or mobile menu element not found");
+    }
   });
-});
-
 </script>
