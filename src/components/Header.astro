@@ -184,15 +184,26 @@ import { SITE_TITLE } from "../consts";
       height: 70px;
     }
   }
-  @media (max-width: 550px) {
+  @media (max-width: 580px) {
+    .mobile-menu.active {
+      margin-top: 40px;
+    }
+
+    header {
+      height: 40px;
+      justify-content: flex-end;
+    }
+
     .internal-links {
       display: none;
     }
+
     .hamburger {
       display: flex;
       margin: 0 auto;
       border-radius: 5px;
     }
+
     .mobile-menu {
       display: none;
     }
