@@ -14,6 +14,7 @@ import { SITE_TITLE } from "../consts";
       <HeaderLink href="/interests">Interests</HeaderLink>
       <HeaderLink href="/awards">Awards</HeaderLink>
     </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
     <div class="social-links">
       <a href="https://www.linkedin.com/in/georgegognadze" target="_blank">
         <span class="sr-only">Follow me on Linkedin</span>
@@ -87,6 +88,11 @@ import { SITE_TITLE } from "../consts";
   }
   @media (max-width: 980px) {
     .social-links {
+      display: none;
+    }
+  }
+  @media (max-width: 810px) {
+    nav h2 {
       display: none;
     }
   }
