@@ -1,0 +1,70 @@
+---
+import BaseHead from "../../components/BaseHead.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../consts";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <Header />
+    <main>
+      <p><a href="/blog">← Back to Blog</a></p>
+      <article>
+        <h1>
+          Solving Upwork's 162-character UX problem with dynamic font scaling. 💬👨‍💻
+        </h1>
+        <p>
+          A little while ago, I built a tool to solve a common frustration on Upwork:
+          long reviews get visually cut off after just 162 characters. Even when
+          clients leave detailed, glowing feedback, the UI hides the best parts behind a
+          "read more" link or dots.
+        </p>
+        <p>
+          My first version fixed this by generating an Upwork-style image for reviews
+          up to 1,008 characters.
+        </p>
+        <p>
+          🚀 Today, I’m pushing a major update to solve this completely:
+        </p>
+        <ol>
+          <li>
+            No more character limits: I wrote a new script that auto-adjusts the font
+            size based on text length. The tool now handles reviews of 4,800+ characters
+            without cutting a single word.
+          </li>
+          <li>
+            Smart QR Code support: You can now embed your profile link directly into the
+            feedback image.
+          </li>
+        </ol>
+        <p>The Result?</p>
+        <p>
+          You can now turn a long text review into a shareable asset that:
+        </p>
+        <ul>
+          <li>Shows the full story (no truncation)</li>
+          <li>Links directly to your hire page via QR</li>
+          <li>Retains the authentic "Upwork" look</li>
+        </ul>
+        <p>
+          Try it here:
+          <a href="https://upworkshare.netlify.app/" target="_blank">https://upworkshare.netlify.app/</a>
+        </p>
+        <p>
+          GitHub:
+          <a href="https://github.com/georgegognadze/upworkshare" target="_blank">https://github.com/georgegognadze/upworkshare</a>
+        </p>
+        <p>
+          I’d love to hear your feedback or see a pull request if you want to improve
+          it further! ⭐
+        </p>
+      </article>
+    </main>
+    <Footer />
+  </body>
+</html>
